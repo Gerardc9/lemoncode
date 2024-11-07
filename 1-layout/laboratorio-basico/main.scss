@@ -1,0 +1,15 @@
+@use "mixins";
+
+body {
+  .container-1 {
+    @include mixins.color-variations(#f01e1e);
+  }
+
+  .container-2 {
+    @include mixins.color-variations(#190adf);
+  }
+
+  .container-3 {
+    @include mixins.color-variations(#12c702);
+  }
+}

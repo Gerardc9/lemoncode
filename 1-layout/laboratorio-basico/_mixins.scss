@@ -1,0 +1,32 @@
+@use "sass:color";
+
+@mixin color-variations($base-color) {
+  display: flex;
+  max-width: 50vw;
+  div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin: 0px 5px 5px 0px;
+    border-radius: 10px;
+
+    &.base-color {
+      background-color: $base-color;
+      flex-grow: 2;
+      color: white;
+    }
+
+    @for $i from 1 through 4 {
+      &.lighten-#{$i} {
+        background-color: color.scale($base-color, $lightness: $i * 5%);
+        color: #c0c0c0;
+      }
+      &.darken-#{$i} {
+        background-color: color.scale($base-color, $lightness: -$i * 5%);
+        color: #919191;
+      }
+    }
+  }
+}
