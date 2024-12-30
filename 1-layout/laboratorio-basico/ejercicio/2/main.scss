@@ -1,0 +1,25 @@
+@import "./sass/themes/theme-a";
+
+$bordered-classes: "base", "important", "warning", "shadow-box";
+
+.container {
+  width: 100%;
+  margin-left: 15px;
+  > * {
+    width: 5%;
+    height: 75px;
+    display: flex;
+    margin-bottom: 1px;
+    justify-content: center;
+    align-items: center;
+
+    @each $class in $bordered-classes {
+      &.#{$class} {
+        border: 1px solid black;
+        @if $theme == "b" {
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

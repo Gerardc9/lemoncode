@@ -1,0 +1,31 @@
+$theme: "b";
+$base-color: #0000ff;
+$important-color: #00008b;
+$warning-color: #02d8e9;
+$primary-font: Arial, Helvetica, sans-serif;
+$secondary-font: Arial, Helvetica, sans-serif;
+$box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+.base {
+  background-color: $base-color;
+}
+
+.important {
+  background-color: $important-color;
+}
+
+.warning {
+  background-color: $warning-color;
+}
+
+.primary-font {
+  font-family: $primary-font;
+}
+
+.secondary-font {
+  font-family: $secondary-font;
+}
+
+.shadow-box {
+  box-shadow: $box-shadow;
+}
