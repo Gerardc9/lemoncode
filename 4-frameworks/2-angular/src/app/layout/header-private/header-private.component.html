@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="header">
+  <div class="header-content">
+    <div class="logo-section">
+      <mat-icon>school</mat-icon>
+      <span class="app-name">Lemoncode Angular Lab</span>
+    </div>
+
+    <div class="user-section">
+      <span class="username">{{ authService.getUsername() }}</span>
+      <button mat-icon-button (click)="logout()" title="Cerrar sesión">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>

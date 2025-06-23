@@ -1,0 +1,16 @@
+<div class="home-container">
+  <div class="welcome-card">
+    <h1>¡Bienvenido al Laboratorio de Angular!</h1>
+    <p>Esta es la página de bienvenida de nuestra aplicación Angular.</p>
+    <p>
+      Aquí puedes navegar por diferentes secciones según tu estado de
+      autenticación:
+    </p>
+
+    <div class="credentials" *ngIf="!authService.isLogged()">
+      <p><strong>Para probar el login, usa estas credenciales:</strong></p>
+      <p>Email: <code>master&#64;lemoncode.net</code></p>
+      <p>Password: <code>12345678</code></p>
+    </div>
+  </div>
+</div>

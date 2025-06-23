@@ -1,0 +1,19 @@
+<div class="app-container">
+  <!-- Cabecera condicional -->
+  <app-header-public *ngIf="!authService.isLogged()"></app-header-public>
+  <app-header-private *ngIf="authService.isLogged()"></app-header-private>
+
+  <!-- Menús condicionales -->
+  <div class="menu-container">
+    <app-menu-public *ngIf="!authService.isLogged()"></app-menu-public>
+    <app-menu-private *ngIf="authService.isLogged()"></app-menu-private>
+  </div>
+
+  <!-- Contenido principal -->
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- Pie de página -->
+  <app-footer></app-footer>
+</div>
